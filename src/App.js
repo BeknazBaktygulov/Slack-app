@@ -9,15 +9,9 @@ function App() {
       <Router>
       <>
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          <Route path="/" exact>
+            <h1>This is a homepage</h1>
+            </Route>
         </Switch>
       </>
     </Router>
