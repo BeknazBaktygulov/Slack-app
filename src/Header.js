@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Avatar } from "@material-ui/core";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
+import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 
 function Header() {
     return (
@@ -17,8 +18,10 @@ function Header() {
             <HeaderSearch>
                 <SearchIcon />
                 <input placeholder="Search" />
-
             </HeaderSearch>
+            <HeaderRight>
+                <HelpOutlineIcon />
+            </HeaderRight>
         </HeaderContainer>
     )
 }
@@ -68,6 +71,18 @@ const HeaderLeft = styled.div`
     }
 
 `;
+
+const HeaderRight = styled.div`
+    flex: 0.3;
+    display: flex;
+    align-items: flex-end;
+
+    > .MuiSvgIcon-root {
+        margin-left: auto;
+        margin-right: 30px;
+    }
+`;
+
 
 const HeaderAvatar = styled(Avatar)`
     cursor: pointer;
