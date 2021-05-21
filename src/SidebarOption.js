@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 
 
-function SidebarOption({ title, Icon }) {
+function SidebarOption({ title, Icon, addChannelOption }) {
     return <SidebarOptionContainer>
         {Icon && <Icon fontSize='small' style={{ padding: 10 }} /> }
         {Icon ? (
