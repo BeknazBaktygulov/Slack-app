@@ -25,7 +25,7 @@ function Sidebar() {
                 </SidebarInfo>
                 <CreateIcon />
             </SidebarHeader>
-            
+
             <SidebarOption Icon={InsertCommentIcon} title="Threads" />
             <SidebarOption Icon={InboxIcon} title="Mentions & Reactions" />
             <SidebarOption Icon={DraftsIcon} title="Saved items" />
