@@ -4,14 +4,12 @@ import { db } from './firebase';
 
 
 function SidebarOption({ title, Icon, addChannelOption }) {
-
-    const addChannel = () => {
+        const addChannel = () => {
         const channelName = prompt('Please enter the channel name');
 
         if (channelName) {
             db.collection('rooms').add({
                 name: channelName,
-                
             })
         }
     };
@@ -60,6 +58,8 @@ const SidebarOptionContainer = styled.div`
     }
 `;
 
-const SidebarOptionChannel = styled.div`
-
+const SidebarOptionChannel = styled.h3`
+    padding: 10px 0;
+    font-weight: 300;
+    
 `;
