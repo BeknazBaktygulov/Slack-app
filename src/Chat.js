@@ -5,10 +5,13 @@ import InfoIcon from '@material-ui/icons/Info';
 import { useSelector } from "react-redux";
 import ChatInput from "./ChatInput";
 import { selectRoomId } from "./features/appSlice";
+import { useCollection } from "react-firebase-hooks/firestore";
 
 function Chat() {
     const roomId = useSelector(selectRoomId);
-
+    const [roomDetails] = useCollection(
+        roomId && db.collection('rooms').doc(roomId)
+    )
 
     return (
         <ChatContainer>

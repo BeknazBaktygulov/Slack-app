@@ -10,7 +10,7 @@ function ChatInput({ channelName, channelId }) {
     const sendMessage = (e) => {
         e.preventDefault();
 
-        if (channelId) {
+        if (!channelId) {
             return false;
         }
 
