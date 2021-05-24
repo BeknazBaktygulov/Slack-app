@@ -7,6 +7,7 @@ import Sidebar from './Sidebar';
 import Chat from './Chat';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from './firebase';
+import Login from './Login';
 
 function App() {
   const [user, loading] = useAuthState(auth);
