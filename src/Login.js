@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import React from 'react'
 import { Button } from "@material-ui/core";
+import { auth, provider } from "./firebase";
 
 function Login() {
 
     const signIn = (e) => {
         e.preventDefault();
-        
+        auth.signInWithPopup(provider).catch(error => alert(error.message)) // login functionality in 1 line of code
     }
 
 
@@ -15,8 +16,8 @@ function Login() {
             <LoginInnerContainer>
                 <img src="https://cdn.dribbble.com/users/1238764/screenshots/5864612/slack-animation.gif" alt="slack-logo" />
                 <h1>Sign in</h1>
-                <p>enelbbs9@gmail.com</p>
-                <Button type='submit' onClick={signIn}>
+                <p>Beknaz.fam</p>
+                <Button onClick={signIn}>
                     Sign in with Google
                 </Button>
             </LoginInnerContainer>
@@ -47,4 +48,10 @@ const LoginInnerContainer = styled.div`
         margin-bottom: 40px;
     }
 
+    > button {
+        margin-top: 50px;
+        text-transform: inherit !important;
+        background-color: #411406 !important;
+        color: white;
+    }
 `;
