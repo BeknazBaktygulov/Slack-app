@@ -51,7 +51,7 @@ const LoginInnerContainer = styled.div`
     > button {
         margin-top: 50px;
         text-transform: inherit !important;
-        background-color: #411406 !important;
+        background-color: #ee2011 !important;
         color: white;
     }
 `;
