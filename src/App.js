@@ -18,7 +18,9 @@ function App() {
       <AppLoading>
           <AppLoadingContents>
               <img src="https://cdn.dribbble.com/users/1238764/screenshots/5864612/slack-animation.gif" alt="" />
-
+              <Spinner name="ball-spin-fade-loader"
+              color="purple"
+              fadeIn="none" />
           </AppLoadingContents>
       </AppLoading>
     )
@@ -51,11 +53,25 @@ function App() {
 export default App;
 
 const AppLoading = styled.div`
-
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
 `;
 
 const AppLoadingContents = styled.div`
-  
+    text-align: center;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    > img {
+      height: 100px;
+      padding: 20px;
+      margin-bottom: 50px;
 `;
 
 
