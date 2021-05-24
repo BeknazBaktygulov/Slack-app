@@ -1,11 +1,24 @@
 import styled from "styled-components";
 import React from 'react'
+import { Button } from "@material-ui/core";
 
 function Login() {
+
+    const signIn = (e) => {
+        e.preventDefault();
+        
+    }
+
+
     return (
         <LoginContainer>
             <LoginInnerContainer>
                 <img src="https://cdn.dribbble.com/users/1238764/screenshots/5864612/slack-animation.gif" alt="slack-logo" />
+                <h1>Sign in</h1>
+                <p>enelbbs9@gmail.com</p>
+                <Button type='submit' onClick={signIn}>
+                    Sign in with Google
+                </Button>
             </LoginInnerContainer>
         </LoginContainer>
     )
