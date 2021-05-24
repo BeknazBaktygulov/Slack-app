@@ -5,13 +5,20 @@ import Header from './Header';
 import styled from "styled-components";
 import Sidebar from './Sidebar';
 import Chat from './Chat';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase';
 
 function App() {
+  const [user, loading] = useAuthState(auth);
+
   return (
     <div className="app">
       
       <Router>
-      <>
+        {!user ? (
+          <Login />
+        ) : (
+          <>
       <Header />
       <AppBody>
         <Sidebar />
@@ -22,7 +29,8 @@ function App() {
           </Switch>
         </AppBody>
       </>
-    </Router>
+        )}
+      </Router>
     </div>
   );
 }
